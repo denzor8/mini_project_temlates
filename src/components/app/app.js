@@ -7,17 +7,22 @@ import EmployeesAddForm from '../employees-add-form/employees-add-form';
 import './app.css';
 
 function App() {
+  const data = [
+    { name: 'Tom', salary: 800 },
+    {name: 'Jonh', salary: 3000},
+    { name: 'Alex', salary: 5000},
+  ]
   return (
     <div className="app">
-        <AppInfo />
+      <AppInfo />
 
-        <div className="search-panel">
-            <SearchPanel/>
-            <AppFilter/>
-        </div>
-        
-        <EmployeesList/>
-        <EmployeesAddForm/>
+      <div className="search-panel">
+        <SearchPanel />
+        <AppFilter />
+      </div>
+
+      <EmployeesList data={ data } />
+      <EmployeesAddForm />
     </div>
   );
 }
